@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, Button} from "react-native";
+import {getSetting} from "../settings";
 
 class HomeScreen extends Component {
     render() {
@@ -7,7 +8,7 @@ class HomeScreen extends Component {
             //TODO: View es analogo al "div" de React
             //TODO: Una view es cualquier cosa que sea un contenedor de elementos o vacio
             <View>
-                <Text>Inicio</Text>
+                <Text>{getSetting("apiUrl")}</Text>
                 <Button onPress={() => this.props.navigation.navigate('Profile')} title={"Mi Perfil"}/>
             </View>
             //TODO: Cuando apriteo el boton navego hasta "profile"
